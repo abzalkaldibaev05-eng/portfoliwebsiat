@@ -1,62 +1,68 @@
+/* Asosiy sozlamalar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: sans-serif;
     background-image: url(./image.png);
-    padding: 80px;
     background-size: cover;
     background-position: center;
-    height: 100vh;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh; /* Qat'iy balandlik olib tashlandi, kontentga qarab o'sadi */
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.wrapper {
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* Header & Glassmorphism (Shaffof oyna) effekti */
 header {
     width: 100%;
-    height: 100%;
-    background: rgb(rgb(244, 87, 87), rgb(77, 255, 77), rgb(116, 116, 204));
-    backdrop-filter: blur(15px);
-    margin: 0 auto;
-    border: 2px solid gray;
-    border-radius: 20px;
-    overflow: scroll;
-    scrollbar-width: none;
-}
-
-.hero-img img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08); /* Chiroyli shaffof fon */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
     width: 100%;
-    height: 100%;
-    padding: 30px 0;
-
+    padding: 40px;
 }
 
+/* Navigatsiya paneli */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
 }
 
 .navbar h1 {
     color: #fff;
     font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
 .nav_links {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .nav_links li {
@@ -65,101 +71,181 @@ header {
 
 .nav-link {
     text-decoration: none;
-    color: #fff;
-    font-size: 32px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
     position: relative;
+}
+
+.nav-link:hover {
+    color: #fff;
 }
 
 .nav-link::after {
     content: "";
     position: absolute;
-    bottom: -8px;
+    bottom: -5px;
     left: 0;
     width: 0%;
-    height: 5px;
+    height: 3px;
     background-color: #fff;
     transition: 0.4s;
+    border-radius: 2px;
 }
 
 .nav-link:hover::after {
     width: 100%;
 }
 
-.hero {
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
+/* Navbardagi oq chiroyli tugma */
+.oi {
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    background-color: #fff;
+    color: #111;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
-.hero-content {
+.oi:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Loyihalar bo'limi tuzilishi */
+.projects {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Kartochkalarni tartibli saqlash uchun quti */
+.projects-grid {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
+    gap: 35px;
 }
 
-.projects {
-  width: 85%;
-  margin: 100px auto;
-  color: #fff;
-}
-
-.projects h2 {
-  font-size: 48px;
-  margin-bottom: 50px;
-}
-
+/* Loyihalar kartochkasi */
 .project-card {
-  display: flex;
-  align-items: center;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
-  border-radius: 30px;
-  overflow: hidden;
-  margin-bottom: 40px;
-  min-height: 300px;
-  transition: 0.4s;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 24px;
+    overflow: hidden;
+    width: 100%;
+    min-height: 260px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
+/* Rasm qismi (Responsive o'lcham bilan) */
 .project-image {
-  width: 45%;
-  height: 300px;
+    width: 40%;
+    height: 260px;
 }
 
 .project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
+/* Matn qismi */
 .project-content {
-  width: 55%;
-  padding: 50px;
+    width: 60%;
+    padding: 40px;
 }
 
 .project-content h3 {
-  font-size: 42px;
-  margin-bottom: 20px;
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .project-content p {
-  font-size: 22px;
-  color: #bdbdbd;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
 }
 
-.oi{
-  padding: 30px 45px;
-    border-radius: 35px;
-    text-decoration: none;
-    background-color: white;
-    color: black;
-    font-size: 25px;
-    font-weight: 700;
-    box-shadow: 0 0 14px white;
+/* ===================================================
+   RESPONSIVE DESIGN (Ekran o'lchamlariga moslash qismi)
+   =================================================== */
 
+/* Noutbuklar va kichikroq ekranlar uchun (Max-width: 1024px) */
+@media (max-width: 1024px) {
+    .project-card {
+        flex-direction: column; /* Rasm tepaga, matn pastga tushadi */
+        min-height: auto;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 220px;
+    }
+
+    .project-content {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .project-content h3 {
+        font-size: 28px;
+    }
+
+    .project-content p {
+        font-size: 16px;
+    }
+}
+
+/* Telefonlar uchun (Max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        padding: 20px;
+    }
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav_links {
+        justify-content: center;
+        gap: 15px;
+    }
+    .nav-link {
+        font-size: 16px;
+    }
+    .oi {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+    .section-title {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
 }

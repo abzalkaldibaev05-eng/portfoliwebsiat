@@ -3,74 +3,79 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABZAL Portfolio - Family</title>
     <link rel="stylesheet" href="famili.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <body>
-    <header>
+    <!-- Sahifa chetlari noutbuklarda chiqib ketmasligi uchun wrapper qo'shildi -->
+    <div data-aos="zoom-in" class="wrapper">
+        <header>
+            <div class="container">
+                
+                <!-- Navigatsiya paneli -->
+                <div class="navbar">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h1>Abzal</h1>
+                    </a>
+                    <nav>
+                        <ul class="nav_links">
+                            <li><a class="nav-link" href="index.html">About</a></li>
+                            <li><a class="nav-link" href="famili.html">Family</a></li>
+                            <li><a class="nav-link" href="projects.html">Projects</a></li>
+                            <li><a class="nav-link" href="menbilanbiglanish.html">Contacts</a></li>
+                            <li><a href="https://bookstore-web-ap.netlify.app/" class="oi">Asosiy loyiha</a></li>
+                        </ul>
+                    </nav>
+                </div>
 
-        <div class="container">
-            <div class="navbar">
-                <h1>Abzal</h1>
-                <nav>
-                    <ul class="nav_links">
-                        <li><a class="nav-link" href="index.html">About</a></li>
-                        <li><a class="nav-link" href="famili.html">Family</a></li>
-                        <li><a class="nav-link" href="projects.html">Projects</a></li>
-                        <li><a class="nav-link" href="menbilanbiglanish.html">Contacts</a></li>
-                        <a href="projects.html" class="oi">Asosiy loyiha</a>
-
-                    </ul>
-                </nav>
-            </div>
-            <div class="box">
-                <div class="dadam">
-                    <div data-aos="fade-right">
-
-                        <h2>Bu menig dadam ismi <span>Nurjigit</span> 1984 yilgi hozirda Bektemir tumani IIB da bolim
-                            boshligi
-                            vazifasida ishlaidi, lovozimi Mayor </h2>
+                <!-- Oila a'zolari bloki -->
+                <div class="box">
+                    
+                    <!-- Dadam qismi -->
+                    <div class="family-member" data-aos="fade-right">
+                        <div class="member-text">
+                            <h2>Bu mening dadam, ismi <span>Nurjigit</span>. 1984-yilgi, hozirda Bektemir tumani IIBda bo'lim boshlig'i vazifasida ishlaydi, lavozimi Mayor.</h2>
+                        </div>
+                        <div class="member-img">
+                            <img class="dadamigm" src="./dadam.png" alt="Dadam">
+                        </div>
                     </div>
-                    <div data-aos="fade-left">
 
-                        <img class="dadamigm" src="./dadam.png" alt="">
+                    <!-- Oyim qismi -->
+                    <div class="family-member reverse" data-aos="fade-left">
+                        <div class="member-img">
+                            <img class="oyim" src="./oyim.png" alt="Oyim">
+                        </div>
+                        <div class="member-text">
+                            <h2>Bu mening oyim, ismi <span>Gulmira</span>. 1989-yilgi, hozirda Toshkent shahar 4-roddomda akusherka lavozimida ishlaydi.</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="oyimh">
 
-
-
-                    <img class="oyim" src="./oyim.png" alt="">
-
-                    <h2>Bu menig oyim ismi <span>Gulmira</span> 1989 yilgi hozirda Toshkent shahar 4-roddomda akusherka
-                        lavozimida ishlaydi </h2>
-
-                </div>
-                <div class="opam">
-
-
-                    <h2>
-
-                        Bu mening opam Aynura.Ortachirchiq tuman ixtisoslashtirigan maktab 9-sinf oquvchisi.Bosh vaqtida
-                        ingliz tili kursiga qatnashadi va turli xil badiy kitoblar oqiydi
-                    </h2>
-
-                    <img class="opamimg" src="./ainur.png" alt="">
-
+                    <!-- Opam qismi -->
+                    <div class="family-member" data-aos="fade-right">
+                        <div class="member-text">
+                            <h2>Bu mening opam Aynura. O'rtachirchiq tumani ixtisoslashtirilgan maktab 9-sinf o'quvchisi. Bo'sh vaqtida ingliz tili kursiga qatnashadi va turli xil badiiy kitoblar o'qiydi.</h2>
+                        </div>
+                        <div class="member-img">
+                            <img class="opamimg" src="./ainur.png" alt="Opam">
+                        </div>
+                    </div>
 
                 </div>
-
-
 
             </div>
+        </header>
+    </div>
 
-    </header>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
     </script>
 </body>
 

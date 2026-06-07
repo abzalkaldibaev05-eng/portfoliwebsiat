@@ -4,68 +4,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ABZAL Portfolio - Projects</title>
   <link rel="stylesheet" href="projects.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-  <header>
+  <div data-aos="zoom-in" class="wrapper">
+    <header>
+      <div class="container">
+        
+        <div class="navbar">
+          <a href="index.html" style="text-decoration: none;">
+            <h1>Abzal</h1>
+          </a>
+          <nav>
+            <ul class="nav_links">
+              <li><a class="nav-link" href="index.html">About</a></li>
+              <li><a class="nav-link" href="famili.html">Family</a></li>
+              <li><a class="nav-link" href="projects.html">Projects</a></li>
+              <li><a class="nav-link" href="menbilanbiglanish.html">Contacts</a></li>
+              <li><a href="https://bookstore-web-ap.netlify.app/" class="oi">Asosiy loyiha</a></li>
+            </ul>
+          </nav>
+        </div>
 
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html">
+        <section class="projects" id="projects">
+          <h2 class="section-title" data-aos="fade-down">Projects</h2>
 
-          <h1>Abzal</h1>
-        </a>
-        <nav>
-          <ul class="nav_links">
-            <li><a class="nav-link" href="index.html">About</a></li>
-            <li><a class="nav-link" href="famili.html">Family</a></li>
-            <li><a class="nav-link" href="projects.html">Projects</a></li>
-            <li><a class="nav-link" href="menbilanbiglanish.html">Contacts</a></li>
-            <a href="projects.html" class="oi">Asosiy loyiha</a>
+          <div class="projects-grid">
+            
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-image">
+                <img src="./mehmonqona.png" alt="Mehmonqona">
+              </div>
+              <div class="project-content">
+                <h3>HOTEL</h3>
+                <p>Bu sayt orqali o'zingiz uchun mehmonxona xonalarini osongina band qilishingiz mumkin.</p>
+              </div>
+            </div>
 
-          </ul>
-        </nav>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-image">
+                <img src="./futbol.png" alt="Sport Do'kon">
+              </div>
+              <div class="project-content">
+                <h3>Sport Do'kon</h3>
+                <p>Bu sayt o'zingizga sportga tegishli barcha turdagi jihoz va kiyimlarni sotib olishingizga yordam beradi.</p>
+              </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="project-image">
+                <img src="./texnolagoi.png" alt="Texnologiya">
+              </div>
+              <div class="project-content">
+                <h3>Texnologiya</h3>
+                <p>Bu sayt orqali o'zingizga eng so'nggi rusumdagi texnologiya jihozlarini xavfsiz sotib olishingiz mumkin.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
       </div>
-      <section class="projects" id="projects">
-        <h2 style="color: white;">Projects</h2>
+    </header>
+  </div>
 
-        <div class="project-card">
-          <div class="project-image">
-            <img src="./mehmonqona.png" alt="Mehmonqona">
-          </div>
-
-          <div class="project-content">
-            <h3>HOTEL</h3>
-            <p>bu saita ozingizga hotel band qilishingiz mumkin</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="./futbol.png" alt="Master Stroy">
-          </div>
-          <div class="project-content">
-            <h3>Spord dokan </h3>
-            <p>bu saita ozingizga spordka tegishli narsalarni sotipolish uchun</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">
-            <img src="./texnolagoi.png" alt="Master Stroy">
-          </div>
-
-          <div class="project-content">
-            <h3>Texnolagoi </h3>
-            <p>bu saita ozingizga texnolagoi tegishli narsalarni sotipolish uchun</p>
-          </div>
-        </div>
-
-      </section>
-
-  </header>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 
 </html>

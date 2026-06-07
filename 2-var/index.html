@@ -1,22 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
-  <title> ABZAL Portfolio</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>ABZAL Portfolio</title>
 </head>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <body>
-  <div data-aos="zoom-in">\
+  <!-- AOS animatsiyasi butun wrapper uchun ishlaydi -->
+  <div data-aos="zoom-in" class="wrapper">
     <header>
-
       <div class="container">
+        
+        <!-- Navigatsiya paneli -->
         <div class="navbar">
-          <a href="index.html">
-
+          <a href="index.html" class="logo">
             <h1>Abzal</h1>
           </a>
           <nav>
@@ -25,32 +26,34 @@
               <li><a class="nav-link" href="famili.html">Family</a></li>
               <li><a class="nav-link" href="projects.html">Projects</a></li>
               <li><a class="nav-link" href="menbilanbiglanish.html">Contacts</a></li>
-              <a href="p.html" class="oi">Asosiy loyiha</a>
+              <li><a href="https://bookstore-web-ap.netlify.app/" class="oi">Asosiy loyiha</a></li>
             </ul>
           </nav>
         </div>
+
+        <!-- Hero bo'limi (Matn va Rasm) -->
         <div class="hero">
           <div class="hero-content">
             <h1 class="hero-text">
-              Assalomu alaykum, hurmatli ota-onalar Mening ismim Abzal men PDP Junior Bektemir filalida 3-oydan beri
-              talim olaman
+              Assalomu alaykum, hurmatli ota-onalar! Mening ismim Abzal. Men PDP Junior Bektemir filialida 3 oydan beri ta'lim olaman.
             </h1>
-            <a href="menhaqimda.html">
-              <button class="hero-btn">Toliqroq molumot</button>
-
-            </a>
+            <a href="menhaqimda.html" class="hero-btn">To'liqroq ma'lumot</a>
           </div>
           <div class="hero-img">
-            <img src="./abzal.png" alt="" />
+            <img src="./abzal.png" alt="Abzal" />
           </div>
         </div>
-      </div>
 
+      </div>
     </header>
   </div>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
   </script>
 </body>
 
